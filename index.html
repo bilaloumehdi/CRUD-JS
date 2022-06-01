@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+     crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="mx-auto text-center head">
+            <h1>CRUDS</h1>
+            <h3> Product Management System</h3>
+        </div>
+        <!-- create -->
+        <div  class="d-flex mt-4 mx-auto create ">
+            <button class="p-2" id="displayForm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                </svg> Create
+            </button>
+        </div>
+            <div id="inputs" class="p-3 mt-4 mx-auto hide">
+                            <div id="status" class="mb-3 bg-success"> </div>
+                        <input type="text"  id="title" placeholder="title" class="p-2">
+
+                        <div class="price d-flex justify-content-around mt-3 gap-3 ">
+                            <input type="number"  id="price" placeholder="price" class="p-2" onkeyup="getTotal()">
+                            <input type="number"  id="taxes" placeholder="taxes"  onkeyup="getTotal()" >
+                            <input type="number"  id="ads" placeholder="ads"  onkeyup="getTotal()" >
+                            
+                        </div>
+                        
+                            <input type="number" name="" id="count" placeholder="count" class="p-2 mt-3">
+                            <input type="text" name="" id="category" placeholder="category" class="p-2 mt-3">
+                            
+                            <div class="total d-flex justify-content-between mt-3"> 
+                            <small id="total"></small>
+
+                            <button style="min-width:90px ;" id="create">Create</button>
+                            </div>
+                        
+            </div>
+            
+            
+        <!-- Search Input -->
+        <div class="row mt-5 justify-content-center">
+            <div id="search-box" class="col-6 d-flex justify-content-start ">
+                <div class="py-3 mx-auto">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </a>
+                </div>
+                <input type="text" onkeyup="searchData(this.value)"  id="search" placeholder="Search By title..." class="flex-grow-1">
+                
+            </div>
+
+            
+        
+        </div>
+                <!-- Modal Create -->
+        
+                
+            
+        <!-- search BY title and BY category -->
+        <div class="d-flex mt-2 gap-4 justify-content-center">
+
+            <div >
+                <button onclick="getsearchMood(this.id)" id="searchByTitle" >Search By Title</button>
+            </div>
+
+            <div >
+                <button onclick="getsearchMood(this.id)" id="searchByCategory">Search By Category </button>
+            </div>
+
+        </div>
+        <div id="deleteAll"  class="mx-auto mt-4">   
+            <!-- show btn if data exists in the table  -->
+        </div>
+
+            
+            <table>
+                
+                    <tr> 
+                        <th>Id</th>                            
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Taxe</th>
+                        <th>Ads</th>
+                        <th>Total</th>
+                        <th>Category</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                        </tr>   
+                        
+                    <tbody id="tbody">
+                           
+                        
+                    </tbody>
+                </table>
+                
+            
+                
+            </div>
+           
+           
+        
+    </div>
+    
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
