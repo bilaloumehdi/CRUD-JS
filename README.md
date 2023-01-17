@@ -9,3 +9,14 @@ This is a simple application that allows for managing products by performing CRU
 - JavaScript
 - Bootstrap
 
+## ScreenShots
+### Add Products
+![App Screenshot](https://github.com/Bilaloum/CRUD/blob/master/ScreenShots/form.jpg?raw=true)
+
+### Search for Products
+![App Screenshot](https://github.com/Bilaloum/CRUD/blob/master/ScreenShots/Search.jpg?raw=true)
+
+### Get all Products 
+![App Screenshot](https://github.com/Bilaloum/CRUD/blob/master/ScreenShots/Table.jpg?raw=true)
+
+
