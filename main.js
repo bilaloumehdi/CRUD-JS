@@ -18,10 +18,9 @@ const displayForm = document.getElementById('displayForm');
 let mood = 'create';
 
 // variable that take id from update to use in create function
-
 let tmp;
 
-// mood for searching 
+//mood to choose searching by Title/category 
 let moodSearch = 'title';
 
 // get total Price 
