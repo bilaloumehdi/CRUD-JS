@@ -91,7 +91,7 @@ create.onclick = function () {
         clearData();
 
     }
-    
+
     showData();
 
 }
@@ -184,6 +184,11 @@ function updateData(id) {
         top: 0,
         behavior: 'smooth'
     })
+
+    let inputs = document.querySelector('#inputs');
+    if (inputs.classList.contains('hide')) {
+        inputs.classList.remove('hide')
+    }
 
 }
 
