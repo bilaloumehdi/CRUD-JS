@@ -50,12 +50,11 @@
    background-color: white;
    outline: none;
    border-radius: 15px;
+   
 }
  #inputs  input:focus{
     background-color: white;
     color: #000;
-    /* transform: scale(1.05); */
-    
     border: solid 2px rgb(108, 50, 162) ;
 }
 
